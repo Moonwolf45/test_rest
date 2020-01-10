@@ -70,11 +70,9 @@ abstract class Api {
                     return 'indexAction';
                 }
             break;
+            case 'PUT':
             case 'POST':
                 return array_shift($this->requestUri) . 'Action';
-            break;
-            case 'PUT':
-                return array_shift($this->requestUri) . 'updateAction';
             break;
             case 'DELETE':
                 return 'deleteAction';
